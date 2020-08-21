@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="img/title-img.png">
+
+  <title>dashboard</title>
+  <!-- linking part -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+    integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-md navbar-light">
+    <button class="navbar-toggler ml-auto bg-light" role="button" data-toggle="collapse" data-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- sidebar -->
+          <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+            <a href="#" class="navbar-brand text-white d-block mx-auto text-center py-3 bottom-border"><span
+                class="badge badge-primary p-1 m-2">VC</span>
+              Voice club
+            </a>
+            <div class="bottom-border py-3">
+              <img src="img/20190403_173936.jpg" alt="profile" class="rounded-circle" width="50">
+              <a href="#" class="text-white ml-3">Gajanan Tayde</a>
+            </div>
+            <ul class="navbar-nav flex-column mt-4">
+              <li class="nav-item">
+                <a href="#" class="nav-link text-white p-3 mb-2 side-link current"> <i
+                    class="fas fa-home text-white fa-lg mr-3 "></i> Dashboard
+                </a>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 side-link"><i
+                    class="fas fa-user text-light fa-lg mr-3"></i>Profile</a>
+              </li>
+              <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 side-link"><i
+                    class="fas fa-envelope text-light fa-lg mr-3"></i>Inbox</a></li>
+              <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 side-link"><i
+                    class="fas fa-shopping-cart text-light fa-lg mr-3"></i>Sales</a></li>
+              <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 side-link"><i
+                    class="fas fa-chart-line text-light fa-lg mr-3"></i>Analytics</a></li>
+              <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 side-link"><i
+                    class="fas fa-chart-bar text-light fa-lg mr-3"></i>Charts</a></li>
+              <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 side-link"><i
+                    class="fas fa-table text-light fa-lg mr-3"></i>Tables</a></li>
+              <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 side-link"><i
+                    class="fas fa-wrench text-light fa-lg mr-3"></i>Settings</a></li>
+              <li class="nav-item"><a href="#" class="nav-link text-white p-3 mb-2 side-link"><i
+                    class="fas fa-file-alt text-light fa-lg mr-3"></i>Documentation</a></li>
+            </ul>
+          </div>
+          <!-- Sidebar ends -->
+          <!-- top Navbar -->
+          <div class="col-xl-10 col-lg-9 col-md-8 bg-dark fixed-top py-2 top-navbar ml-auto">
+            <div class="row align-item-center">
+              <div class="col-md-4 mt-2 ">
+                <h4 class="text-light text-uppercase">Dashboard</h4>
+              </div>
+              <div class="col-md-5">
+                <form>
+                  <div class="input-group">
+                    <input type="text" class="form-control search" placeholder="Search...">
+                    <button class="btn btn-light rounded-circle ml-2"><i class="fas fa-search text-info"></i></button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-3">
+                <ul class="navbar-nav">
+                  <li class="nav-item notify-main"> <a href="#" class="nav-link notify"> <i
+                        class="fas fa-comments text-white fa-lg"></i></a></li>
+                  <li class="nav-item notify-main"> <a href="#" class="nav-link notify"> <i
+                        class="fas fa-bell text-white fa-lg"></i></a>
+                  </li>
+                  <li class="nav-item ml-md-auto"> <a href="#" class="nav-link " data-toggle="modal"
+                      data-target="#logout">
+
+                      <i class="fas fa-sign-out-alt text-info fa-lg"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- top navbar ends -->
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="modal fade" id="logout">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Are you sure ?</h4>
+          <button class="close" data-dismiss="modal" type="button">&times;</button>
+        </div>
+        <div class="modal-body">Click on logout to leave</div>
+        <div class="modal-footer">
+          <button class="btn btn-success" data-dismiss="modal" type="button">Cancel</button>
+          <button class="btn btn-danger" data-dismiss="modal" type="button"> Logout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid my-2  justify-content-between">
+    <div class="row">
+      <div class="col-xl-10 col-lg-9 col-md-8 pt-5 pl-auto  ml-auto">
+        <div class="row">
+          <div class="col-xl-3 col-sm-6 p-2">
+            <div class="card shadow">
+              <div class="card-body row justify-content-between">
+                <div class="p-2 ml-3 mt-3"><i class="fas fa-shopping-cart fa-6x text-warning "></i> </div>
+                <div class="p-3">
+                  <h3 class="lead text-muted text-right p-3">Sales</h3>
+                  <h2 class=" text-muted"> $108000</h2>
+                </div>
+              </div>
+              <div class="card-footer d-flex lead">
+                <div>
+                  <h2><i class="fa fa-retweet 4x mt-2 text-muted" aria-hidden="true"></i></h2>
+                </div>
+                <div class="p-2 ml2 text-muted">
+                  <h2>Update Now</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 p-2">
+            <div class="card shadow">
+              <div class="card-body row justify-content-between">
+                <div class="p-2 ml-3 mt-3"> <i class="fas fa-money-bill-alt fa-6x text-success"></i> </div>
+                <div class="p-3">
+                  <h3 class="lead text-muted text-right p-3">Expenses</h3>
+                  <h2 class=" text-muted"> $39000</h2>
+                </div>
+              </div>
+              <div class="card-footer d-flex lead">
+                <div>
+                  <h2><i class="fa fa-retweet 4x mt-2 text-muted" aria-hidden="true"></i></h2>
+                </div>
+                <div class="p-2 ml2 text-muted">
+                  <h2>Update Now</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 p-2">
+            <div class="card shadow">
+              <div class="card-body row justify-content-between">
+                <div class="p-2 ml-3 mt-3"> <i class="fas fa-users fa-6x text-info"></i> </div>
+                <div class="p-3">
+                  <h3 class="lead text-muted text-right p-3">Users</h3>
+                  <h2 class=" text-muted"> 15000</h2>
+                </div>
+              </div>
+              <div class="card-footer d-flex lead">
+                <div>
+                  <h2><i class="fa fa-retweet 4x mt-2 text-muted" aria-hidden="true"></i></h2>
+                </div>
+                <div class="p-2 ml2 text-muted">
+                  <h2>Update Now</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 p-2">
+            <div class="card shadow">
+              <div class="card-body row justify-content-between">
+                <div class="p-2 ml-3 mt-3"> <i class="fas fa-chart-line fa-6x text-danger"></i> </div>
+                <div class="p-3">
+                  <h3 class="lead text-muted text-right p-3">Visitors</h3>
+                  <h2 class=" text-muted"> 45000</h2>
+                </div>
+              </div>
+              <div class="card-footer d-flex lead">
+                <div>
+                  <h2><i class="fa fa-retweet 4x mt-2 text-muted" aria-hidden="true"></i></h2>
+                </div>
+                <div class="p-2 ml2 text-muted">
+                  <h2>Update Now</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-10 col-lg-9 col-md-8 pt-5 pl-auto align-items-center ml-auto">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 text-center">
+            <h3 class="text-muted">Staff Salary</h3>
+            <table class="table table-striped bg-light text-center">
+              <thead>
+                <tr class="text-muted">
+                  <th>Sr.No</th>
+                  <th>Name</th>
+                  <th>Salary</th>
+                  <th>Date</hr>
+                  <th>Contact</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>Gajanan</td>
+                  <td>$2500</td>
+                  <td>19/08/2020</td>
+                  <td><button class="btn btn-primary">Message</button></td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Aman</td>
+                  <td>$2600</td>
+                  <td>19/08/2020</td>
+                  <td><button class="btn btn-primary">Message</button></td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>Trupti</td>
+                  <td>$2600</td>
+                  <td>19/08/2020</td>
+                  <td><button class="btn btn-primary">Message</button></td>
+                </tr>
+                <tr>
+                  <th>4</th>
+                  <td>Akshay</td>
+                  <td>$2800</td>
+                  <td>19/08/2020</td>
+                  <td><button class="btn btn-primary">Message</button></td>
+                </tr>
+                <tr>
+                  <th>5</th>
+                  <td>Ankush</td>
+                  <td>$2900</td>
+                  <td>19/08/2020</td>
+                  <td><button class="btn btn-primary">Message</button></td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- pagination -->
+            <nav>
+              <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <a href="#" class="page-link py-2 px-3">
+                    <span>
+                      << </span> <span class="sr-only">Previous
+                    </span>
+                  </a>
+                </li>
+                <li class="page-item active">
+                  <a href="#" class="page-link py-2 px-3">
+                    1
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a href="#" class="page-link py-2 px-3">
+                    2
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a href="#" class="page-link py-2 px-3">
+                    3
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a href="#" class="page-link py-2 px-3">
+                    <span>>></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-6 col-md-12 text-center">
+            <h3 class="text-muted text-center mb-3">Recent Payments</h3>
+            <table class="table table-dark table-hover">
+              <thead class="">
+                <tr class="">
+                  <th>Sr.No</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                </tr>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>Anish</td>
+                  <td>$2000</td>
+                  <td>19/8/2020</td>
+                  <td><span class="badge badge-success w-75 py-2">approved</span></td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Kartik</td>
+                  <td>$2000</td>
+                  <td>19/8/2020</td>
+                  <td><span class="badge  badge-lg badge-danger w-75 py-2">Pending</span></td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>Ashish</td>
+                  <td>$2000</td>
+                  <td>19/8/2020</td>
+                  <td><span class="badge badge-success w-75 py-2">approved</span></td>
+                </tr>
+                <tr>
+                  <th>4</th>
+                  <td>mohit</td>
+                  <td>$2000</td>
+                  <td>19/8/2020</td>
+                  <td><span class="badge badge-success w-75 py-2">approved</span></td>
+                </tr>
+                <tr>
+                  <th>5</th>
+                  <td>Sarang</td>
+                  <td>$2000</td>
+                  <td>19/8/2020</td>
+                  <td><span class="badge badge-danger w-75 py-2">Pending</span></td>
+                </tr>
+                <tr>
+                  <th>6</th>
+                  <td>Anish</td>
+                  <td>$2000</td>
+                  <td>19/8/2020</td>
+                  <td><span class="badge badge-danger w-75 py-2">Pending</span></td>
+                </tr>
+              </tbody>
+              </thead>
+            </table>
+
+            <nav>
+              <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <a href="#" class="page-link py-2 px-3">
+                    <span>Previous</span>
+                  </a>
+                </li>
+                <li class="page-item active">
+                  <a href="#" class="page-link py-2 px-3">
+                    1
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a href="#" class="page-link py-2 px-3">
+                    2
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a href="#" class="page-link py-2 px-3">
+                    3
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a href="#" class="page-link py-2 px-3">
+                    <span>Next</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class=" col-xl-10 col-lg-9 col-md-8 ml-auto justify-content-center">
+        <div class="row">
+          <div class="col-xl-6 col-md-12 mb-4 my-5 pt-3">
+            <div class="bg-dark text-white p-4 rounded">
+              <h4 class="mb-5">Conversion Rates</h4>
+              <h6 class="mb-3">Google Chrome</h6>
+              <div class="progress mb-4" style="height: 20px;">
+                <div class="progress-bar progress-bar-striped bg-info font-weight-bold" style="width: 93%;">93%</div>
+              </div>
+              <h6 class="mb-3">Mozila Firefox</h6>
+              <div class="progress mb-4" style="height: 20px;">
+                <div class="progress-bar  progress-bar-striped bg-warning font-weight-bold" style="width: 81%;">81%
+                </div>
+              </div>
+              <h6 class="mb-3">Safari</h6>
+              <div class="progress mb-4" style="height: 20px;">
+                <div class="progress-bar  progress-bar-striped bg-success font-weight-bold" style="width: 67%;">67%
+                </div>
+              </div>
+              <h6 class="mb-3">Explorer</h6>
+              <div class="progress mb-4" style="height: 20px;">
+                <div class="progress-bar  progress-bar-striped bg-primary font-weight-bold" style="width: 39%;">39%
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-6 col-md-12 mb-4 my-5 ml-auto pt-3">
+            <h3 class="">Tasks:</h3>
+            <div
+              class="col-12  my-3 bg-light border-bottom-0 border-top-0   border-right-0 row align-items-center justify-content-between"
+              style="border:2px solid red;">
+              <div>
+                <input type="checkbox" class="largerCheckbox geekmark" name="checkBox2" checked>
+              </div>
+              <div class="p-2 mt-3">
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, debitis?
+                </p>
+              </div>
+              <div>
+                <button type="button" class="btn " style="background-color: rgb(255, 255, 255);" data-toggle="popover"
+                  data-trigger="hover" data-placement="top" data-content="Edit">
+                  <i class="fas fa-edit fa-2x text-success mr-2"></i>
+                </button>
+              </div>
+              <div>
+                <button type="button" class="btn " style="background-color: rgb(252, 251, 250);" data-toggle="popover"
+                  data-trigger="hover" data-placement="top" data-content="Edit">
+                  <button type="button" class="btn " style="background-color: rgb(252, 251, 250);" data-toggle="popover"
+                    data-trigger="hover" data-placement="top" data-content="Delet">
+                    <i class="fas fa-trash-alt fa-2x text-danger mr-2"></i>
+                  </button>
+              </div>
+            </div>
+            <div
+              class="col-12  my-3 bg-light border-bottom-0 border-top-0   border-right-0 row align-items-center justify-content-between"
+              style="border:2px solid red;">
+              <div>
+                <input type="checkbox" class="largerCheckbox geekmark" name="checkBox2" checked>
+              </div>
+              <div class="p-2 mt-3">
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, debitis?
+                </p>
+              </div>
+              <div>
+                <button type="button" class="btn " style="background-color: rgb(255, 255, 255);" data-toggle="popover"
+                  data-trigger="hover" data-placement="top" data-content="Edit">
+                  <i class="fas fa-edit fa-2x text-success mr-2"></i>
+                </button>
+              </div>
+              <div>
+                <button type="button" class="btn " style="background-color: rgb(252, 251, 250);" data-toggle="popover"
+                  data-trigger="hover" data-placement="top" data-content="Edit">
+                  <button type="button" class="btn " style="background-color: rgb(252, 251, 250);" data-toggle="popover"
+                    data-trigger="hover" data-placement="top" data-content="Delet">
+                    <i class="fas fa-trash-alt fa-2x text-danger mr-2"></i>
+                  </button>
+              </div>
+            </div>
+            <div
+              class="col-12  my-3 bg-light border-bottom-0 border-top-0   border-right-0 row align-items-center justify-content-between"
+              style="border:2px solid red;">
+              <div>
+                <input type="checkbox" class="largerCheckbox geekmark" name="checkBox2" checked>
+              </div>
+              <div class="p-2 mt-3">
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, debitis?
+                </p>
+              </div>
+              <div>
+                <button type="button" class="btn " style="background-color: rgb(255, 255, 255);" data-toggle="popover"
+                  data-trigger="hover" data-placement="top" data-content="Edit">
+                  <i class="fas fa-edit fa-2x text-success mr-2"></i>
+                </button>
+              </div>
+              <div>
+                <button type="button" class="btn " style="background-color: rgb(252, 251, 250);" data-toggle="popover"
+                  data-trigger="hover" data-placement="top" data-content="Edit">
+                  <button type="button" class="btn " style="background-color: rgb(252, 251, 250);" data-toggle="popover"
+                    data-trigger="hover" data-placement="top" data-content="Delet">
+                    <i class="fas fa-trash-alt fa-2x text-danger mr-2"></i>
+                  </button>
+              </div>
+            </div>
+            <div
+              class="col-12  my-3 bg-light border-bottom-0 border-top-0   border-right-0 row align-items-center justify-content-between"
+              style="border:2px solid red;">
+              <div>
+                <input type="checkbox" class="largerCheckbox geekmark" name="checkBox2" checked>
+              </div>
+              <div class="p-2 mt-3">
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, debitis?
+                </p>
+              </div>
+              <div>
+                <button type="button" class="btn " style="background-color: rgb(255, 255, 255);" data-toggle="popover"
+                  data-trigger="hover" data-placement="top" data-content="Edit">
+                  <i class="fas fa-edit fa-2x text-success mr-2"></i>
+                </button>
+              </div>
+              <div>
+                <button type="button" class="btn " style="background-color: rgb(252, 251, 250);" data-toggle="popover"
+                  data-trigger="hover" data-placement="top" data-content="Edit">
+                  <button type="button" class="btn " style="background-color: rgb(252, 251, 250);" data-toggle="popover"
+                    data-trigger="hover" data-placement="top" data-content="Delet">
+                    <i class="fas fa-trash-alt fa-2x text-danger mr-2"></i>
+                  </button>
+              </div>
+            </div>
+            <div
+              class="col-12  my-3 bg-light border-bottom-0 border-top-0   border-right-0 row align-items-center justify-content-between"
+              style="border:2px solid red;">
+              <div>
+                <input type="checkbox" class="largerCheckbox geekmark" name="checkBox2" checked>
+              </div>
+              <div class="p-2 mt-3">
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, debitis?
+                </p>
+              </div>
+              <div>
+                <button type="button" class="btn " style="background-color: rgb(255, 255, 255);" data-toggle="popover"
+                  data-trigger="hover" data-placement="top" data-content="Edit">
+                  <i class="fas fa-edit fa-2x text-success mr-2"></i>
+                </button>
+              </div>
+              <div>
+                <button type="button" class="btn " style="background-color: rgb(252, 251, 250);" data-toggle="popover"
+                  data-trigger="hover" data-placement="top" data-content="Edit">
+                  <button type="button" class="btn " style="background-color: rgb(252, 251, 250);" data-toggle="popover"
+                    data-trigger="hover" data-placement="top" data-content="Delet">
+                    <i class="fas fa-trash-alt fa-2x text-danger mr-2"></i>
+                  </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid my-5">
+    <div class="row">
+      <div class="col-xl-10 ml-auto row col-lg-9 col-md-8">
+        <div class="col-xl-6 mr-5">
+          <h4 class="text-center mb-4">Recent Customer Activities</h4>
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header">
+                <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true">
+                  <img src="img/cust1.jpeg" width="50" class="mr-3 rounded">
+                  Akshay posted a new comment
+                </button>
+              </div>
+              <div class="collapse show" id="collapseOne" data-parent="#accordion" style="">
+                <div class="card-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis earum modi delectus fugiat consectetur eaque harum obcaecati, saepe id vitae, dolore aliquam! Quos, doloribus quisquam.
+                </div>                      
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <button class="btn btn-block bg-secondary text-light text-left collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false">
+                  <img src="img/cust2.jpeg" width="50" class="mr-3 rounded">
+                  Anisha posted a new comment
+                </button>
+              </div>
+              <div class="collapse" id="collapseTwo" data-parent="#accordion" style="">
+                <div class="card-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis earum modi delectus fugiat consectetur eaque harum obcaecati, saepe id vitae, dolore aliquam! Quos, doloribus quisquam.
+                </div>                      
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <button class="btn btn-block bg-secondary text-light text-left collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false">
+                  <img src="img/cust3.jpeg" width="50" class="mr-3 rounded">
+                  Anita posted a new comment
+                </button>
+              </div>
+              <div class="collapse" id="collapseThree" data-parent="#accordion" style="">
+                <div class="card-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis earum modi delectus fugiat consectetur eaque harum obcaecati, saepe id vitae, dolore aliquam! Quos, doloribus quisquam.
+                </div>                      
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <button class="btn btn-block bg-secondary text-light text-left collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false">
+                  <img src="img/cust4.jpeg" width="50" class="mr-3 rounded">
+                  Ashu posted a new comment
+                </button>
+              </div>
+              <div class="collapse" id="collapseFour" data-parent="#accordion" style="">
+                <div class="card-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis earum modi delectus fugiat consectetur eaque harum obcaecati, saepe id vitae, dolore aliquam! Quos, doloribus quisquam.
+                </div>                      
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse" data-target="#collapseFive">
+                  <img src="img/cust5.jpeg" width="50" class="mr-3 rounded">
+                  Gajanan posted a new comment
+                </button>
+              </div>
+              <div class="collapse" id="collapseFive" data-parent="#accordion">
+                <div class="card-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis earum modi delectus fugiat consectetur eaque harum obcaecati, saepe id vitae, dolore aliquam! Quos, doloribus quisquam.
+                </div>                      
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse" data-target="#collapseSix">
+                  <img src="img/cust6.jpeg" width="50" class="mr-3 rounded">
+                  Tupu posted a new comment
+                </button>
+              </div>
+              <div class="collapse" id="collapseSix" data-parent="#accordion">
+                <div class="card-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis earum modi delectus fugiat consectetur eaque harum obcaecati, saepe id vitae, dolore aliquam! Quos, doloribus quisquam.
+                </div>                      
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-5 col-md-12 mt-5">
+          <div class="card rounded">
+            <div class="card-body">
+              <h5 class="text-muted text-center mb-4">Quick Status Post</h5>
+              <ul class="list-inline text-center py-3">
+                <li class="list-inline-item mr-4">
+                  <a href="#">
+                    <i class="fas fa-pencil-alt text-success"></i>
+                    <span class="h6 text-muted">Status</span>
+                  </a>
+                </li>
+                <li class="list-inline-item mr-4">
+                  <a href="#">
+                    <i class="fas fa-camera text-info"></i>
+                    <span class="h6 text-muted">Photo</span>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fas fa-map-marker-alt text-primary"></i>
+                    <span class="h6 text-muted">Check-in</span>
+                  </a>
+                </li>
+              </ul>
+              <form>
+                <div class="form-group">
+                  <input type="text" class="form-control py-2 mb-3" placeholder="What's Your Status...">
+                  <button type="button"
+                    class="btn btn-block text-uppercase font-weight-bold text-light btn-primary py-2 mb-5">Submit
+                    Post</button>
+                </div>
+              </form>
+              <div class="row">
+                <div class="col-6">
+                  <div class="card bg-light">
+                    <i class="far fa-calendar-alt fa-8x text-warning d-block m-auto py-3"></i>
+                    <div class="card-body">
+                      <p class="card-text text-center font-weight-bold text-uppercase">Mon, may 26</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="card bg-light">
+                    <i class="far fa-clock fa-8x text-danger d-block m-auto py-3"></i>
+                    <div class="card-body">
+                      <p class="card-text text-center font-weight-bold text-uppercase">3:50 am</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+  <footer style="background-color: rgb(209, 217, 223);">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+          <div class="row border-top pt-3">
+            <div class="col-lg-6 text-center">
+              <ul class="list-inline">
+                <li class="list-inline-item mr-2">
+                  <a href="#" class="text-dark">Skill &amp; Safari</a>
+                </li>
+                <li class="list-inline-item mr-2">
+                  <a href="#" class="text-dark">About</a>
+                </li>  
+                <li class="list-inline-item mr-2">
+                  <a href="#" class="text-dark">Support</a>
+                </li>
+                <li class="list-inline-item mr-2">
+                  <a href="#" class="text-dark">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 text-center">
+              <p>© 2020 Copyright. Made With <i class="fas fa-heart text-danger"></i>  by <span class="text-success">Skill &amp; Safari</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- linking part -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+
+  <script src="js/scrtpt.js"></script>
+
+  <!-- jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+
+  <!-- Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+
+  <!-- Latest compiled and minified Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+  <!-- Initialize Bootstrap functionality -->
+  <script>
+    // Initialize tooltip component
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    // Initialize popover component
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+  </script>
+
+</body>
+
+</html>
